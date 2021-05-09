@@ -1,0 +1,33 @@
+.title {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    &_centered {
+        text-align: center;
+    }
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 22px;
+    background: -webkit-linear-gradient(45deg, #FFF5BA 3.11%, #DA6C37 96.78%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    padding-bottom: 55px;
+    &:after {
+        position: absolute;
+        content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iMzEiIHZpZXdCb3g9IjAgMCA1MSAzMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjAuNTY4MzU5IiB5MT0iMjkuODE3IiB4Mj0iNDkuOTMxOCIgeTI9IjEuMzE2OTkiIHN0cm9rZT0idXJsKCNwYWludDBfbGluZWFyKSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyIiB4MT0iMjIuMjI5IiB5MT0iMTcuODg4NiIgeDI9IjIyLjcyOSIgeTI9IjE4Ljc1NDYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0VFQjY3RCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNEQTZDMzciLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
+        top: 50px;
+        left: 0;
+    }
+    &_centered {
+        text-align: center;
+        &:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

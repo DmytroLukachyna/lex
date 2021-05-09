@@ -1,0 +1,103 @@
+.slider {
+    min-height: 590px;
+    width: 100%;
+    background: url(../img/slider_bg.jpg) no-repeat 50%/cover;
+    padding: 65px 125px 73px 0;
+    &__wrapper {
+        max-width: 630px;
+        margin-left: auto;
+    }
+    &__subtitle {
+        margin-top: 15px;
+    }
+    &__content {
+        display: flex;
+        position: relative;
+        &-dots {
+            display: none;
+        }
+    }
+    &__item {
+        /* display: flex !important; */
+        &-phones {
+            max-width: 218px;
+            margin-right: 60px;
+            position: absolute;
+            top: 15px;
+            left: 0;
+        }
+        /* &-phone {
+            width: 218px;
+            &-img {
+                width: 218px;
+                height: 433px;
+            }
+        } */
+        &-wrapper {
+            padding-left: 270px;
+        }
+        &-text {
+            padding-top: 50px;
+            &-wrapper {
+                max-width: 360px;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+        }
+        &-subtitle {
+            margin-top: 20px;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: rgb(147, 147, 147);
+        }
+    }
+    &__arrows {
+        display: flex;
+        width: 100%;
+        margin-top: 115px;
+    }
+    &__arrow {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .15s ease-in-out;
+        cursor: pointer;
+        background: linear-gradient(rgb(238, 182, 125), rgb(218, 108, 55));
+        padding: 2px;
+        margin-right: 10px;
+        &_inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .15s ease-in-out;
+            background: rgb(0, 0, 0);
+        }
+        &:hover {
+            .slider__arrow_inner {
+                background: linear-gradient(rgb(238, 182, 125), rgb(218, 108, 55));
+                svg {
+                    path {
+                        fill: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+    &__counter {
+        font-weight: normal;
+        font-size: 13px;
+        color: rgb(147, 147, 147);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+    }
+}

@@ -1,1 +1,1 @@
-https://dmytrolukachyna.github.io/projects/lex/
+https://dmytrolukachyna.pp.ua/projects/commercial/lex/

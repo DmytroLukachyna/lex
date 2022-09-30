@@ -1,32 +1,32 @@
 .consultation {
-    padding: 75px 100px 70px 0;
-    background: url(../img/consultation_bg.jpg) no-repeat 50%/cover;
-    &__wrapper {
-        max-width: 460px;
-        margin-left: auto;
+  padding: 75px 100px 70px 0;
+  background: url(../img/consultation_bg.jpg) no-repeat 50% / cover;
+  &__wrapper {
+    max-width: 460px;
+    margin-left: auto;
+  }
+  &__line {
+    margin: 24px 0;
+  }
+  &__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  &__text {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(147, 147, 147);
+  }
+  &__btn {
+    margin-top: 25px;
+    width: 285px;
+    &:hover {
+      .btn__inner {
+        background: rgb(10, 10, 10);
+      }
     }
-    &__line {
-        margin: 24px 0;
-    }
-    &__subtitle {
-        font-weight: 600;
-        font-size: 18px;
-        color: #FFFFFF;
-    }
-    &__text {
-        margin-top: 20px;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-        color: rgb(147, 147, 147);
-    }
-    &__btn {
-        margin-top: 25px;
-        width: 285px;
-        &:hover {
-            .btn__inner {
-                background: rgb(10, 10, 10);
-            }
-        }
-    }
+  }
 }

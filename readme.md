@@ -1,1 +1,1 @@
-https://dmytrolukachyna.github.io/projects/lex/
+https://lex.dmytrolukachyna.com/

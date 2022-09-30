@@ -1,30 +1,30 @@
 .companies {
-    padding-top: 125px;
-    &__subtitle {
-        margin-top: 15px;
+  padding-top: 125px;
+  &__subtitle {
+    margin-top: 15px;
+  }
+  &__wrapper {
+    margin-top: 53px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 360px;
+    width: 100%;
+    border: 10px solid rgba(49, 49, 49, 0.5);
+    padding: 30px;
+    &-title {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
     }
-    &__wrapper {
-        margin-top: 53px;
-        display: flex;
-        justify-content: space-between;
+    &-subtitle {
+      margin-top: 10px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgb(147, 147, 147);
     }
-    &__item {
-        max-width: 360px;
-        width: 100%;
-        border: 10px solid rgba(49, 49, 49, .5);
-        padding: 30px;
-        &-title {
-            margin-top: 20px;
-            font-weight: 600;
-            font-size: 18px;
-            color: rgb(255, 255, 255);
-        }
-        &-subtitle {
-            margin-top: 10px;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 20px;
-            color: rgb(147, 147, 147);
-        }
-    }
+  }
 }

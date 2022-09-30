@@ -28,14 +28,14 @@ $msg = '';
 $mail = new PHPMailer();
     $mail->isSMTP();
     $mail->CharSet = 'utf-8'; 
-	$mail->Host = 'smtp.ukr.net';
+	$mail->Host = 'smtp.post.box';
 	$mail->SMTPAuth = true;
-	$mail->Username = 'web.development@ukr.net';
+	$mail->Username = 'email@addre.ss';
 	$mail->Password = 'passdeletedandrevoked';
 	$mail->SMTPSecure = 'ssl';
 	$mail->Port = 465;
-    $mail->setFrom('web.development@ukr.net', 'LEX');
-    $mail->addAddress('web.development@ukr.net');
+    $mail->setFrom('email@addre.ss', 'LEX');
+    $mail->addAddress('email@addre.ss');
     $mail->Subject = 'Лист із LEX';
     $mail->Body = 'Користувач сайту LEX залишив заявку! 
 	ПІБ власника транспортного засобу: ' . $request_name . ' 

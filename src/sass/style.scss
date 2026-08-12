@@ -1,25 +1,31 @@
-@import "libs/normalize";
-@import "base/container";
-@import "base/fonts";
-@import "sections/mainscreen";
-@import "base/animations";
-@import "elements/buttons";
-@import "elements/titles";
-@import "sections/promo";
-@import "sections/police";
-@import "sections/business";
-@import "sections/slider";
-@import "sections/companies";
-@import "sections/services";
-@import "sections/footer";
-@import "sections/consultation";
-@import "sections/instruction";
-@import "sections/contacts";
-@import "sections/copyright";
-@import "sections/request";
-@import "libs/fancybox";
-@import "elements/modal";
+/* Library CSS is loaded from the packages here rather than from script.js, so
+   that it keeps the cascade position the vendored copies used to have: slick
+   came first as its own <link>, fancybox sat just before elements/modal, whose
+   .fancybox-slide--html .fancybox-close-small override has the same specificity
+   as the library's own and therefore only wins by coming later. */
+@use "slick-carousel/slick/slick.css";
+@use "libs/normalize";
+@use "base/container";
+@use "base/fonts";
+@use "sections/mainscreen";
+@use "base/animations";
+@use "elements/buttons";
+@use "elements/titles";
+@use "sections/promo";
+@use "sections/police";
+@use "sections/business";
+@use "sections/slider";
+@use "sections/companies";
+@use "sections/services";
+@use "sections/footer";
+@use "sections/consultation";
+@use "sections/instruction";
+@use "sections/contacts";
+@use "sections/copyright";
+@use "sections/request";
+@use "@fancyapps/fancybox/dist/jquery.fancybox.css";
+@use "elements/modal";
 
 /*  */
 
-@import "base/media";
+@use "base/media";

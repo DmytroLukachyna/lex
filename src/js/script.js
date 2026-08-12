@@ -1,3 +1,10 @@
+import $ from './jquery-global.js';
+import 'slick-carousel';
+import '@fancyapps/fancybox';
+import 'jquery.nicescroll';
+import 'jquery-mask-plugin';
+import 'jquery-validation';
+
 $(document).ready(function () {
   jQuery.validator.addMethod('validateError', function (value, element) {
     if ($('.request__form-photo').hasClass('request__form-photo_loaded')) {
@@ -182,69 +189,39 @@ $(document).ready(function () {
   $('.modal__form-main').submit(function (e) {
     if ($('.modal__form-main').valid()) {
       e.preventDefault();
-      $.ajax({
-        type: 'POST',
-        url: 'mailer/modal_form/form.php',
-        data: $(this).serialize(),
-      }).done(function () {
-        $(this).find('input').val('');
-        $('.modal__form-main').trigger('reset');
-        $('.thanks').fadeIn('fast');
-        parent.$.fancybox.close();
-        setTimeout(function () {
-          $('.thanks').fadeOut('slow');
-        }, 2500);
-      });
+      $('.modal__form-main').trigger('reset');
+      $('.thanks').fadeIn('fast');
+      $.fancybox.close();
+      setTimeout(function () {
+        $('.thanks').fadeOut('slow');
+      }, 2500);
       return false;
     }
   });
   $('.modal__form-default').submit(function (e) {
     if ($('.modal__form-default').valid()) {
       e.preventDefault();
-      $.ajax({
-        type: 'POST',
-        url: 'mailer/modal_form/form.php',
-        data: $(this).serialize(),
-      }).done(function () {
-        $(this).find('input').val('');
-        $('.modal__form-default').trigger('reset');
-        $('.thanks').fadeIn('fast');
-        parent.$.fancybox.close();
-        setTimeout(function () {
-          $('.thanks').fadeOut('slow');
-        }, 2500);
-      });
+      $('.modal__form-default').trigger('reset');
+      $('.thanks').fadeIn('fast');
+      $.fancybox.close();
+      setTimeout(function () {
+        $('.thanks').fadeOut('slow');
+      }, 2500);
       return false;
     }
   });
   $('#request__form').submit(function (e) {
     if ($('#request__form').valid()) {
       e.preventDefault();
-      var formData = new FormData(this);
-      $.ajax({
-        url: 'mailer/request_form/form.php',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        data: formData,
-        success: function (msg) {
-          if (msg == 'ok') {
-            $('.request__form-photo').removeClass('request__form-photo_loaded');
-          } else {
-            $('.request__form-photo').removeClass('request__form-photo_loaded');
-          }
-        },
-      }).done(function () {
-        $(this).find('input').val('');
-        $('#request__form').trigger('reset');
-        $('.request__form-photo').text('Прикріпіть фото');
-        $('.request__thanks').fadeIn('fast');
-        setTimeout(function () {
-          $('.thanks').fadeOut('slow');
-          $('.request').fadeOut();
-          $('.site-wrapper').fadeIn();
-        }, 2500);
-      });
+      $('#request__form').trigger('reset');
+      $('.request__form-photo').removeClass('request__form-photo_loaded').text('Прикріпіть фото');
+      $('.request__thanks').fadeIn('fast');
+      setTimeout(function () {
+        $('.thanks').fadeOut('slow');
+        $('.request').fadeOut();
+        $('.site-wrapper').fadeIn();
+      }, 2500);
+      return false;
     }
   });
   vehiclePhotoAddition();
